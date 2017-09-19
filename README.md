@@ -1,6 +1,6 @@
 <h1 align="center">
 	<br>
-	<img src="https://raw.githubusercontent.com/ogulcan/filter-wp-api/master/img/icon.png" alt="Filter WP API" width="200"></a>
+	<img src="https://raw.githubusercontent.com/ogulcan/filter-wp-api/master/img/icon.png" alt="Filter WP API" width="300"></a>
   	<br>
   	Filter Wordpress REST API
   	<br>
