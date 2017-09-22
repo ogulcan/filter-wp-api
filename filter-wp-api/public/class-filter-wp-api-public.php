@@ -77,6 +77,7 @@ class Filter_WP_Api_Public {
 		            'id'        => $data->data['id'],
 		            'title'     => $data->data['title']['rendered'],
 		            'link'      => $data->data['link'],
+		            'date'		=> $data->data['modified'],
 		            'image'     => $featured_image_url[0]
 		        ];
 			}
