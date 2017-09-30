@@ -1,6 +1,6 @@
 <h1 align="center">
 	<br>
-	<img src="https://raw.githubusercontent.com/ogulcan/filter-wp-api/master/img/icon.png" alt="Filter WP API" width="300"></a>
+	<a href="https://wordpress.org/plugins/filter-wp-api/" target="_blank"><img src="https://raw.githubusercontent.com/ogulcan/filter-wp-api/master/img/icon.png" alt="Filter WP API" width="300"></a>
   	<br>
   	Filter Wordpress REST API
   	<br>
@@ -77,7 +77,7 @@ And here is `detailed`:
 
 ## Installition
 
-Plugin is not ready on wordpress repostory. So download this repo and upload `filter-wp-api/` directory into your plugins. 
+Plugin is ready on wordpress [plugins][https://wordpress.org/plugins/filter-wp-api/]. You can find via search on plugins. Or just download this project and upload `filter-wp-api/` directory into your `wp-content/plugins`. 
 
 After installition, just add `?_compact` or `?_detailed` as GET parameter at the end of the URL.
 
