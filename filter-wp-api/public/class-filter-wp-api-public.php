@@ -91,6 +91,7 @@ class Filter_WP_Api_Public {
 		            'id'        => $data->data['id'],
 		            'title'     => $data->data['title']['rendered'],
 		            'link'      => $data->data['link'],
+		            'author'	=> $data->data['author'],
 		            'image'     => $featured_image_url[0],
 		            'content'	=> $data->data['content']['rendered'],
 		            'date'		=> $data->data['modified'],
