@@ -3,14 +3,14 @@
 /**
  * Filter Wordpress API
  *
- * @since             1.0.0
+ * @since             1.0.1
  * @package           Filter_WP_Api
  *
  * @wordpress-plugin
  * Plugin Name:       Filter Wordpress API
  * Plugin URI:        https://github.com/ogulcan/filter-wp-api
  * Description:       A wordpress plugin that clears huge fields of WP Rest API.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Ogulcan Orhan
  * Author URI:        https://github.com/ogulcan
  * License:           GPL-3.0
@@ -22,7 +22,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'PLUGIN_VERSION', '1.0.0' );
+define( 'PLUGIN_VERSION', '1.0.1' );
 
 /**
  * The core plugin class that is used to define internationalization,
