@@ -48,7 +48,10 @@
 								<div class="inside">
 									<p>This plugin sweeps lots of WP REST API fields.</p>
 									<p>Just add "?_compact" or "?_detailed" to end of api url.</p>
-									<p>Example is <a href="<?php site_url(); ?>../wp-json/wp/v2/posts?_detailed" target="_blank"><strong>here</strong></a> and <a href="<?php site_url(); ?>../wp-json/wp/v2/posts?_compact" target="_blank"><strong>here</strong></a>.</p>
+									<p>Compact post example is <a href="<?php site_url(); ?>../wp-json/wp/v2/posts?_compact" target="_blank"><strong>here</strong></a>.</p>
+									<p>Detailed post example is <a href="<?php site_url(); ?>../wp-json/wp/v2/posts?_detailed" target="_blank"><strong>here</strong></a>.</p>
+									<p>Compact user example is <a href="<?php site_url(); ?>../wp-json/wp/v2/users?_compact" target="_blank"><strong>here</strong></a>.</p>
+									<p>Detailed user example is <a href="<?php site_url(); ?>../wp-json/wp/v2/users?_detailed" target="_blank"><strong>here</strong></a>.</p>
 								</div>
 							</div>
 						</div>

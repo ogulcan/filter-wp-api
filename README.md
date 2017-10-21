@@ -13,15 +13,15 @@
 
 If you ever used WP Rest API, you should have noticed that there are lots of fields that even your client does not need. It makes no sense to load all fields for simple list or even single post view.
 
-This plugin aims to remove redundant fields on Rest API. For now, it's only available for posts.
+This plugin aims to remove redundant fields on Rest API. For now, it's only available for posts and users.
 
 ## Features
 
 There are two endpoints: `compact` and `detailed`. 
 
-Compact is useful for listing posts and Detailed is better for single post view.
+Compact is useful for listing posts/users/ and Detailed is better for single post/user view.
 
-Here is what `compact` looks like:
+Here is what `compact` endpoint looks like for example posts:
 
 ```json
 [
@@ -49,7 +49,8 @@ Here is what `compact` looks like:
 ]
 ``` 
 
-And here is `detailed`:
+
+Here is `detailed` endpoint:
 
 ```json
 [
@@ -76,6 +77,43 @@ And here is `detailed`:
 		"categories": [
 			29
 		]
+	}
+]
+``` 
+
+So here is `compact` endpoint looks like for example users:
+
+```json
+[
+	{
+		"id": 1,
+		"name": "Example User",
+		"image": "http://0.gravatar.com/avatar/ce98d9ae462f57b6427e3c8abad827?s=96&d=mm&r=g"
+	},
+	{
+		"id": 2,
+		"name": "Another Example User",
+		"image": "http://0.gravatar.com/avatar/6f673b94785fd6f49c62202aff96b5?s=96&d=mm&r=g"
+	}
+]
+``` 
+
+And here is `detailed` endpoint looks like for example users:
+```json
+[
+	{
+		"id": 2,
+		"name": "Murat Karayalçın",
+		"desc": "",
+		"image": "http://0.gravatar.com/avatar/ce98d9ae4bc62f57b6427e3c8abad827?s=96&d=mm&r=g",
+		"link": "http://localhost/politikyol/author/mkarayalcin/"
+	},
+	{
+		"id": 1,
+		"name": "Oğulcan Orhan",
+		"desc": "",
+		"image": "http://0.gravatar.com/avatar/6f673b9475f85fd6f49c62202aff96b5?s=96&d=mm&r=g",
+		"link": "http://localhost/politikyol/author/root/"
 	}
 ]
 ``` 

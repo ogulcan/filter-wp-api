@@ -146,7 +146,13 @@ class Filter_WP_Api {
 	private function define_public_hooks() {
 		$plugin_public = new Filter_WP_Api_Public( $this->get_Filter_WP_Api(), $this->get_version() );
 
-		$this->loader->add_action( 'rest_prepare_post', $plugin_public, 'apply_filter' );
+		$this->loader->add_action( 'rest_prepare_post', $plugin_public, 'apply_post_filter' );		
+		//$this->loader->add_action( 'rest_prepare_user', $plugin_public, 'apply_user_filter' );
+
+		/* 
+		 * DEBUG MODE
+		 */
+		$this->loader->add_action( 'rest_prepare_user', $plugin_public, 'apply_debug_filter' );
 	}
 
 	/**

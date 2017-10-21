@@ -60,7 +60,7 @@ class Filter_WP_Api_Public {
 	 * @since 	   1.0.0
 	 * @param      mixed    $data       Post objects
 	 */
-	public function apply_filter( $data ) {
+	public function apply_post_filter( $data ) {
 		$options = (get_option('filter-wp-api_options') ? get_option('filter-wp-api_options') : false);
 
 		$disabled = isset($options["disable-filter"]);
@@ -101,5 +101,52 @@ class Filter_WP_Api_Public {
 		} 
 
 	    return $data;		
+	}
+
+	/**
+	 * This function will filter Wordpress REST API fields.
+	 *
+	 * @since 	   1.1.0
+	 * @param      mixed    $data       Post objects
+	 */
+	public function apply_user_filter( $data ) {
+	}
+
+	/**
+	 * This function will filter Wordpress REST API fields.
+	 *
+	 * Note: This function will not be called on production.
+	 *
+	 * @since 	   1.1.0
+	 * @param      mixed    $data       User objects
+	 */
+	public function apply_debug_filter( $data ) {
+		$options = (get_option('filter-wp-api_options') ? get_option('filter-wp-api_options') : false);
+
+		$disabled_user = isset($options["disable-user-filter"]);
+		$disabled_user_compact = isset($options["disable-user-filter-compact"]);
+		$disabled_user_detailed = isset($options["disable-user-filter-detailed"]);
+
+		if ($options == FALSE || $disabled_user == FALSE) {
+			if (isset($_GET['_compact']) && $disabled_user_compact == FALSE) {
+				return [
+		            'id'        => $data->data['id'],
+		            'name'		=> $data->data['name'],
+		            'image'     => $data->data['avatar_urls']['96']
+		        ];
+			}
+
+			if (isset($_GET['_detailed']) && $disabled_user_detailed == FALSE) {
+				return [
+		            'id'        => $data->data['id'],
+		            'name'		=> $data->data['name'],
+		            'desc'	=> $data->data['description'],
+		            'image'     => $data->data['avatar_urls']['96'],
+		            'link'	=> $data->data['link']
+		        ];
+			}
+		}
+
+		return $data;	
 	}
 }
